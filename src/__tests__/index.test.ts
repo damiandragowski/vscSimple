@@ -1,4 +1,5 @@
-import { SayHiToMe } from '../index';
+import { Startup } from '../index';
 test('Test SayHiToMe', () => {
-  expect(SayHiToMe('Damian')).toBe('Hi Damian');
+  const s1 = new Startup();
+  expect(s1.SayHiToMe('Damian')).toBe('Hi Damian');
 });

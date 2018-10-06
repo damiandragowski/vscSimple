@@ -1,21 +1,27 @@
 {
-  "name": "vscSimple",
+  "name": "vsc-simple",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Visual Studio Code Template",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"    
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/damiandragowski/vscSimple.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["Visual Studio Code", "Template project"],
+  "author": "damian.dragowski",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/damiandragowski/vscSimple/issues"
   },
