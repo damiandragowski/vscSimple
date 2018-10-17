@@ -1,5 +1,11 @@
+// use this to check if parameter is some object
 function assertNever(x: never): never {
     throw new Error("Unexpected object: " + x);
+}
+
+// extract key from object, check if that object has that key
+function extractKey<T, U extends keyof T> ( t : T, key : U ): T[U] {
+    return t[key];
 }
 
 interface A1 {
@@ -26,3 +32,4 @@ function getDimensionSize( a : A ) {
         default: assertNever(a);
     }
 }
+
