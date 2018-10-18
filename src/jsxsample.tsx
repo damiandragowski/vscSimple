@@ -9,5 +9,11 @@ class CC {
     constructor({name:string = "abc"}) { this.name = name;}
 }
 
+function Cfactory() {
+    return { some: () => {}}
+} 
+
 <someNewTag/>;
-<CC name="fff"></CC>
+<CC name="fff"></CC>;
+<Cfactory />;
+
