@@ -1,21 +1,8 @@
-import { Sequence } from './sequence'
+import Sequence  from './sequence'
+import * as helper  from './helper'
+
 let c = new Sequence(100);
 for (let i of c) console.log(i);
-// use this to check if parameter is some object
-function assertNever(x: never): never {
-    throw new Error("Unexpected object: " + x);
-}
-
-// extract key from object, check if that object has that key
-function extractKey<T, U extends keyof T> ( t : T, key : U ): T[U] {
-    return t[key];
-}
-
-type FunctionPropertyNames<T> = { [K in keyof T]: T[K] extends Function ? K : never }[keyof T];
-type FunctionProperties<T> = Pick<T, FunctionPropertyNames<T>>;
-
-type NonFunctionPropertyNames<T> = { [K in keyof T]: T[K] extends Function ? never : K }[keyof T];
-type NonFunctionProperties<T> = Pick<T, NonFunctionPropertyNames<T>>;
 
 // diff properties of two types
 type Diff<T, U> = T extends U ? never : T;
@@ -47,7 +34,7 @@ function getDimensionSize( a : A ) {
         case "A2": return a.length;
         case "A3": return a.depth;
 
-        default: assertNever(a);
+        default: helper.assertNever(a);
     }
 }
 
@@ -119,4 +106,5 @@ type sample3 = contraCoVariantInfer< { a : (x: number) => void, b: (x: number) =
 
 let f1 :sample1 = "damian";
 console.log(f1)
+
 

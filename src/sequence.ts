@@ -1,4 +1,4 @@
-class Sequence implements Iterable<number> {
+export default class Sequence implements Iterable<number> {
     private counter = 0;
     constructor(readonly maxval:number = 10) {}
     public [Symbol.iterator]() {
@@ -13,5 +13,5 @@ class Sequence implements Iterable<number> {
     }
 }
 
-export { Sequence };
+
 export { Sequence as intSequence };
