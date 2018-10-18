@@ -1,3 +1,6 @@
+import { Sequence } from './sequence'
+let c = new Sequence(100);
+for (let i of c) console.log(i);
 // use this to check if parameter is some object
 function assertNever(x: never): never {
     throw new Error("Unexpected object: " + x);
@@ -42,6 +45,8 @@ function getDimensionSize( a : A ) {
     switch(a.kind) {
         case "A1": return a.size;
         case "A2": return a.length;
+        case "A3": return a.depth;
+
         default: assertNever(a);
     }
 }
@@ -85,7 +90,7 @@ class keyUnionImpl implements keyUnion {
     key3 : "key3" = "key3";
     key4 : "key4" = "key4";
 }
-logKey(new keyUnionImpl)
+//logKey(new keyUnionImpl)
 
 function tt1():number {
     return 0;
