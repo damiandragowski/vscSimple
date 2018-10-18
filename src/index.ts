@@ -1,3 +1,4 @@
+/// <reference lib="es6" />
 import Sequence  from './sequence'
 import * as helper  from './helper'
 
