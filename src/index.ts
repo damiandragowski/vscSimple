@@ -125,3 +125,4 @@ class B2 implements B1 {
 }
 let bb8 = new B2("aaa", "bbb");
 console.log(bb8);
+

@@ -2,10 +2,12 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "declaration": true,
+    //"declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx" : "preserve"
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
