@@ -13,13 +13,16 @@
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"    
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/damiandragowski/vscSimple.git"
   },
-  "keywords": ["Visual Studio Code", "Template project"],
+  "keywords": [
+    "Visual Studio Code",
+    "Template project"
+  ],
   "author": "damian.dragowski",
   "license": "MIT",
   "bugs": {
@@ -30,6 +33,7 @@
     "@types/jest": "^23.3.3",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
+    "reflect-metadata": "^0.1.12",
     "ts-jest": "^23.10.3",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",

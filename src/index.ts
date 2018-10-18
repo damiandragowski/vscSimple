@@ -126,3 +126,10 @@ class B2 implements B1 {
 let bb8 = new B2("aaa", "bbb");
 console.log(bb8);
 
+
+import {UniqueNumber} from "./decor";
+let c1 = new UniqueNumber("world")
+console.log(c1);
+console.log(new UniqueNumber("world"));
+console.log(new UniqueNumber("world"));
+c1.testMethod();
