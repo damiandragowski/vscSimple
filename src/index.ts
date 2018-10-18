@@ -110,3 +110,18 @@ console.log(f1)
 
 //let clo = new Time.AnalogClock(12,34);
 //console.log(clo.tick());
+interface B1 {
+    name :string;
+}
+interface B1 {
+    surname: string;
+    name :string; // is the same could be merged
+}
+
+class B2 implements B1 {
+    name :string;
+    surname : string;
+    constructor(a:string, b:string) { this.name = a; this.surname = b;}
+}
+let bb8 = new B2("aaa", "bbb");
+console.log(bb8);
