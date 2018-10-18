@@ -108,3 +108,5 @@ let f1 :sample1 = "damian";
 console.log(f1)
 
 
+//let clo = new Time.AnalogClock(12,34);
+//console.log(clo.tick());
