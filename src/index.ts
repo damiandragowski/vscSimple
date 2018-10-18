@@ -133,3 +133,44 @@ console.log(c1);
 console.log(new UniqueNumber("world"));
 console.log(new UniqueNumber("world"));
 c1.testMethod();
+
+class D1 {
+    hello() {
+        console.log("D1");
+    }
+}
+class D2 {
+    hello() {
+        console.log("D2");
+    }
+}
+
+class D3 {
+    hello() {
+        console.log("D3");
+    }
+}
+
+class D123 implements D1, D2, D3 {
+    constructor() {}
+    hello : () => void;
+} 
+
+class D321 implements D3, D2, D1 {
+    constructor() {}
+    hello : () => void;
+} 
+
+import { applyMixins } from './mixin'
+applyMixins(D123, [D1,D2,D3]);
+let d123 = new D123();
+d123.hello();
+
+applyMixins(D321, [D3,D2,D1]);
+let d321 = new D321();
+d321.hello();
+
+applyMixins(D321, [D3,D1,D2]);
+let d312 = new D321();
+d312.hello();
+

@@ -28,6 +28,6 @@ export class UniqueNumber {
     @testDecor("hello before")
     testMethod() {
         console.log("Hello from test method");
-        console.log(Reflect.getMetadata(msgMetadataKey, this, "testMethod"));
+        console.log(Reflect.getMetadata(msgMetadataKey, this, "testMethod")); // extract value by property name of this object,and key of metadata
     }
 }
